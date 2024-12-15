@@ -1,0 +1,42 @@
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+section {
+    height: 100vh;
+}
+
+header,
+header {
+    font-size: 5rem;
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    background-color: black;
+    position: sticky;
+    color: bisque;
+    text-align: center;
+    bottom: 0;
+    height: 100px;
+}
+
+.icon {
+
+    top: 40%;
+    position: fixed;
+    right: 0;
+}
+
+footer a {
+    color: azure;
+}

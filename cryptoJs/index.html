@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./node_modules/crypto-js/crypto-js.js"></script>
+    <script type="text/javascript" src="hybrit-crypto.js"></script>
+    <script src="https://unpkg.com/node-forge@1.0.0/dist/forge.min.js"></script>
+    <script type="text/javascript" src="./node_modules/hybrid-crypto-js/web/hybrid-crypto.min.js"></script>
+    <script src="./node_modules/node-rsa/src/NodeRSA.js"></script>
+    <script type="text/javascript" src="rsa.js"></script>
+
+</body>
+<script>
+    //var encrypted = CryptoJS.AES.encrypt("Hello", "secret-key");
+    //var decrypted = CryptoJS.AES.decrypt(encrypted, "secret-key");
+    // var plainText = decrypted.toString(CryptoJs.enc.Utf8);
+    // console.log(plainText);
+    var publicKeyString = "MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGlUeWg0+pBUSYh2VgI9YN6VKqNhztNqkeuJuUUs/OGvhKIGxkifzrEfedIQlIE6474FRVWRCaaxchTOnzGLUTYj7o6bCORd5pSChpsVgpH7JPPVwlwFYQAWwY7uGrq3ltJUgfE+Qjv+TUWT4AK5b8La6Jq0A9XU4GbykaToP+7zAgMBAAE";
+
+    var privateKeyString = "MIICWwIBAAKBgGlUeWg0+pBUSYh2VgI9YN6VKqNhztNqkeuJuUUs/OGvhKIGxkifzrEfedIQlIE6474FRVWRCaaxchTOnzGLUTYj7o6bCORd5pSChpsVgpH7JPPVwlwFYQAWwY7uGrq3ltJUgfE+Qjv+TUWT4AK5b8La6Jq0A9XU4GbykaToP+7zAgMBAAECgYAWPKtVALpVdjYABVurJWIqG7vguml74OflnjHrFNBepTuPKXb7JiHw6wBBBRcVIWWrXFmC8xfihVvcYLLjNtJyIdRR6dl3gUfim6UBu17ex9/xh0LLBT8SKX6s2x1/ekyCd8zW9idovSumPkh8HrLliha5brDvSLR8nuJCUfVBgQJBALlKFcvOmb9KRbLXwvZr1/zcEz9AMOFsaDYcmRZJM1aLQNtFnn0PMZZbL26h1PNGV/Lfh7kOg7x4ORwnJVCkahECQQCRhrmHJ1HlTR6QyCFPZ/MT/j/acYxQi2+uAZO/NCLNsR0yyoTgwflfgFggYbuqgBQmDQFp7eIWj5oNNDoXzOTDAkEArSy02lsqD0MXiWNm8HEy2T3HL2KLTOTJMWnhGpcnyEc2Qrn6ut+sdN6cokXWhdjE8lZAv5D1Rv0GQ23CznAcQQJAFJ851TwuL8dA6JVjmwQI/zFNTSBAGP3ZYpgYnsS9ldZeY98s+0ihlPX0BwqydFPYBxhate8e1cGdu/dFsC+5zwJAchRYOPwfsQDt1lwizvHBYX57kwiJ4N/RBPAcxl6hAnvZxwhPFheN1d+NIByxUB3PvXSJhDfeWGh8H7TbQfrmBA";
+
+    var key = "GkhozrqyAZHGoN/ueYQpdA==";
+    var iv = "eL1veRxov2lby7LlxyFuSw==";
+
+    var ciphertext = CryptoJS.AES.encrypt('my message', key, { iv: iv }).toString();
+
+    // Decrypt
+    var bytes = CryptoJS.AES.decrypt(ciphertext, key, { iv: iv });
+    var originalText = bytes.toString(CryptoJS.enc.Utf8);
+
+    console.log(originalText); // 'my message'
+
+    ////////////////////////////// RSA
+
+    const formattedStringKeyPublic = publicKeyString.match(/.{1,64}/g).join('\n');
+    const pemPublicKey = `-----BEGIN PUBLIC KEY-----\n${formattedStringKeyPublic}\n-----END PUBLIC KEY-----\n`;
+    console.log('publicKey', pemPublicKey);
+
+    const formattedStringKeyPrivate = privateKeyString.match(/.{1,64}/g).join('\n');
+    const pemPrivateKey = `-----BEGIN RSA PRIVATE KEY-----\n${formattedStringKeyPrivate}\n-----END RSA PRIVATE KEY-----\n`;
+    console.log('pemPrivateKey', pemPrivateKey);
+
+
+
+    //var rsa = forge.pki.rsa;
+    // var bytes = decodeBase64("hello");
+    // var keypair = rsa.generateKeyPair({ bits: 2048);
+    // Hello world!
+    // const privateKey = forge.pki.privateKeyFromPem(pemPublicKey);
+    // const publicKey = forge.pki.publicKeyFromPem(pemPrivateKey);
+
+
+    var publicKey = pemPublicKey;
+    var privateKey = pemPrivateKey;
+
+    // Generate RSA key pair, default key size is 4096 bit
+    if (typeof privateKey === 'string') privateKey = forge.pki.privateKeyFromPem(privateKey);
+    if (typeof publicKey === 'string') publicKey = forge.pki.publicKeyFromPem(publicKey);
+
+    var rsa = forge.pki.rsa;
+
+    var keypair = rsa.generateKeyPair({ bits: 1024, e: 0x10001 });
+    var pk = keypair.publicKey;
+    var pks = keypair.privateKey;
+
+    console.log(keypair.publicKey);
+    console.log(keypair.privateKey);
+
+    function stringToAsciiBytes(str) {
+        const bytes = [];
+        for (let i = 0; i < str.length; i++) {
+            bytes.push(str.charCodeAt(i));
+        }
+        return new Uint8Array(bytes);
+    }
+    console.log(publicKey);
+    console.log(privateKey);
+    const str = 'Hello, World!!!!';
+    var asciiBytes = stringToAsciiBytes(str);
+    console.log(asciiBytes.length);
+    asciiBytes = forge.random.getBytesSync(asciiBytes.length);
+
+    console.log(asciiBytes); // Uint8Array [ 72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 33 ]
+    var encrypted = publicKey.encrypt(asciiBytes, 'RSA-OAEP');
+
+    // decrypt data with a private key using RSAES-OAEP
+    var decrypted = privateKey.decrypt(encrypted, 'RSA-OAEP');
+
+    var de_hex = stringToAsciiBytes(decrypted);
+
+    console.log(decrypted);
+
+    var encrypted = publicKey.encrypt(bytes, 'RSA-OAEP', {
+        md: forge.md.sha256.create(),
+        mgf1: {
+            md: forge.md.sha1.create()
+        }
+    });
+
+</script>
+
+</html>

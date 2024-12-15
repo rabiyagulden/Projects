@@ -1,0 +1,8 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD=Aa112233
+ENV MYSQL_DATABASE=my_db
+ENV MYSQL_USER=rabiya
+ENV MYSQL_USER_PASSWORD=Aa112233
+COPY init.sql /docker-sh
+WORKDIR /var/lib/mysql
+CMD ["mysqld"]

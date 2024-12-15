@@ -1,0 +1,89 @@
+:root {
+    --primary-color: black;
+    --secondary-color: gray;
+    --primary-button-color: blue;
+
+}
+
+.body {}
+
+.a {
+    text-decoration: none;
+}
+
+.header-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Section */
+
+/*Hero Section */
+.hero-section {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 5.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hero-section h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    word-spacing: 1.2px;
+    margin-bottom: 1rem;
+}
+
+.hero-section a {
+    background-color: var(--primary-button-color);
+    color: white;
+
+}
+
+.card {}
+
+.box {
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    margin-top: 3rem;
+    flex-direction: column;
+    border-radius: 0.7rem;
+
+}
+
+.box-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box h1 {
+    margin-top: 2rem;
+}
+
+.box p {
+    padding: 1rem;
+}
+
+.icon-box {
+    margin-top: -2rem;
+}
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    display: flex;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "RsaCrypto",
+  "type": "module",
+  "main": "rsa.js",
+  "dependencies": {
+    "hybrid-crypto-js": "^0.2.4",
+    "node-forge": "^1.3.1"
+  },
+  "devDependencies": {
+    "crypto-js": "^4.1.1",
+    "node-rsa": "^1.1.1"
+  }
+}

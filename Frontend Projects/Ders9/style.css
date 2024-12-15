@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: '';
+    display: block;
+}
+
+.cf:after {
+    clear: both;
+}
+
+ul {
+    background-color: black;
+    margin: 1rem;
+    list-style: none;
+}
+
+nav>ul {
+    margin: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+li a:hover {
+    background-color: blueviolet;
+}
+
+.archive {
+    position: relative;
+}
+
+.archive ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.archive ul li {
+    float: none;
+}
+
+.archive:hover ul {
+    display: block;
+}

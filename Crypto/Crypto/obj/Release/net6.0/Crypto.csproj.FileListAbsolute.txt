@@ -1,0 +1,15 @@
+/Users/rabiyagulden/Projects/Crypto/Crypto/bin/Release/net6.0/Crypto
+/Users/rabiyagulden/Projects/Crypto/Crypto/bin/Release/net6.0/Crypto.deps.json
+/Users/rabiyagulden/Projects/Crypto/Crypto/bin/Release/net6.0/Crypto.runtimeconfig.json
+/Users/rabiyagulden/Projects/Crypto/Crypto/bin/Release/net6.0/Crypto.dll
+/Users/rabiyagulden/Projects/Crypto/Crypto/bin/Release/net6.0/Crypto.pdb
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.csproj.AssemblyReference.cache
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.AssemblyInfoInputs.cache
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.AssemblyInfo.cs
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.csproj.CoreCompileInputs.cache
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.dll
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/refint/Crypto.dll
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.pdb
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/Crypto.genruntimeconfig.cache
+/Users/rabiyagulden/Projects/Crypto/Crypto/obj/Release/net6.0/ref/Crypto.dll

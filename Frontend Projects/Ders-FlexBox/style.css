@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-content {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.header-content a {
+    color: white;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav div ul li a {
+    text-decoration: none;
+}
+
+nav div a {
+    text-decoration: none;
+}
+
+nav div ul li {
+    display: flex;
+}
+
+.inline li{
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.active a{
+    color: rgba(255, 255, 255, 1)
+}
+.passive a{
+    color: rgba(255,255,255,0.5);
+}
+.passive a:hover {
+    color: rgba(255,255,255,0.75);
+}
+
+.card {
+    background-color: rgb(248, 249, 250);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 0.7rem;
+    flex-direction: column;
+}
+.card h1 {
+    padding: 2rem;
+    font-size: 32px;
+}
+.card p {
+    padding: 2rem;
+    font-size: 18px;
+}
+
+.card a {
+    color: white;
+    margin: 1rem;
+    background-color: #0d6efd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.card a:hover {
+    background-color: #0b5ed7;
+}
+
+.box-size {
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.box {
+    width: 30%;
+    background-color: rgb(248, 249, 250);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 0.7rem;
+    flex-direction: column;
+}
+
+.box h1 {
+    margin-top: 2rem;
+}
+
+.box p {
+    padding: 2rem;
+    text-align: center;
+}
+
+.icon-box {
+    margin-top: -2rem;
+    background-color: #0d6efd;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+}
+
+footer {
+    margin-top: 3rem;
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+
+
+
+
+

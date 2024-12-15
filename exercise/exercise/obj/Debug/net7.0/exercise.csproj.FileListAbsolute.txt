@@ -1,0 +1,15 @@
+/Users/rabiyagulden/Projects/exercise/exercise/bin/Debug/net7.0/exercise
+/Users/rabiyagulden/Projects/exercise/exercise/bin/Debug/net7.0/exercise.deps.json
+/Users/rabiyagulden/Projects/exercise/exercise/bin/Debug/net7.0/exercise.runtimeconfig.json
+/Users/rabiyagulden/Projects/exercise/exercise/bin/Debug/net7.0/exercise.dll
+/Users/rabiyagulden/Projects/exercise/exercise/bin/Debug/net7.0/exercise.pdb
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.csproj.AssemblyReference.cache
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.AssemblyInfoInputs.cache
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.AssemblyInfo.cs
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.csproj.CoreCompileInputs.cache
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.dll
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/refint/exercise.dll
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.pdb
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/exercise.genruntimeconfig.cache
+/Users/rabiyagulden/Projects/exercise/exercise/obj/Debug/net7.0/ref/exercise.dll
